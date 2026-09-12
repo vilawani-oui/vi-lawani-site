@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vi Lawani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #15130F;
+    --paper: #EAE2D0;
+    --paper-dim: #C9BFA8;
+    --gold: #B8935A;
+    --rule: #3A362C;
+    --max: 680px;
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin: 0;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 18px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a{ color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(184,147,90,0.4); }
+  a:hover{ border-bottom-color: var(--gold); }
+
+  .wrap{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header.hero{
+    padding: 108px 24px 64px;
+    text-align: left;
+  }
+  header.hero .wrap{ max-width: var(--max); }
+  h1.name{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 1.05;
+    margin: 0 0 14px;
+    color: var(--paper);
+  }
+  p.tagline{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--paper-dim);
+    margin: 0;
+    max-width: 46ch;
+  }
+
+  section{
+    padding: 56px 24px;
+    border-top: 1px solid var(--rule);
+  }
+  section .wrap{ max-width: var(--max); }
+
+  h2{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 32px;
+    margin: 0 0 24px;
+    color: var(--paper);
+  }
+  h3.book-title{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 26px;
+    margin: 40px 0 12px;
+    color: var(--paper);
+  }
+
+  p{ margin: 0 0 20px; max-width: 66ch; }
+  p:last-child{ margin-bottom: 0; }
+
+  em, i{ font-family: 'Cormorant Garamond', serif; font-style: italic; }
+
+  .cta-line{
+    margin-top: 28px;
+    font-size: 16px;
+    color: var(--paper-dim);
+  }
+
+  ul.plain, ol.plain{
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+  }
+  ul.plain li{
+    margin-bottom: 14px;
+    padding-left: 20px;
+    position: relative;
+  }
+  ul.plain li::before{
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  ol.priorities{
+    padding-left: 0;
+    list-style: none;
+    counter-reset: item;
+    margin: 32px 0 0;
+  }
+  ol.priorities > li{
+    counter-increment: item;
+    margin-bottom: 28px;
+    padding-left: 40px;
+    position: relative;
+  }
+  ol.priorities > li::before{
+    content: counter(item) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+  }
+  ol.priorities strong{
+    font-weight: 600;
+    color: var(--paper);
+  }
+  ol.priorities ul{
+    margin: 10px 0 0;
+    padding-left: 0;
+    list-style: none;
+    font-size: 16px;
+    color: var(--paper-dim);
+  }
+  ol.priorities ul li{
+    margin-bottom: 6px;
+    padding-left: 16px;
+    position: relative;
+  }
+  ol.priorities ul li::before{
+    content: "·";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  figure{
+    margin: 0;
+    padding: 56px 24px;
+    text-align: center;
+    border-top: 1px solid var(--rule);
+  }
+  figcaption{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--paper-dim);
+  }
+
+  footer{
+    padding: 32px 24px 64px;
+    text-align: left;
+    font-size: 14px;
+    color: var(--paper-dim);
+    letter-spacing: 0.02em;
+  }
+  footer .wrap{ max-width: var(--max); }
+
+  @media (max-width: 520px){
+    h1.name{ font-size: 46px; }
+    header.hero{ padding: 72px 20px 48px; }
+    section{ padding: 40px 20px; }
+    body{ font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1 class="name">Vi Lawani</h1>
+    <p class="tagline">Artist, entrepreneur, and human rights advocate — writing between Athens, Lagos, and Washington, D.C.</p>
+  </div>
+</header>
+
+<section id="bio">
+  <div class="wrap">
+    <h2>CV and Bio</h2>
+    <p>Vi Lawani is a queer Greek-born Nigerian American artist, entrepreneur, and human rights advocate.</p>
+    <p>In his capacity as an advocate, Vi has worked at several social cause institutions in cities like New York, Paris, and Indianapolis on issues relating to immigration, the LGBTQ community, African development, human trafficking, amongst other pressing issues that disempower and dehumanize individuals in favor of capital or bigoted ideologies.</p>
+    <p>Vi has served as a co-curator of the 'Where is South' exhibition at The Africa Center in NYC, where his art piece <em>Full Reflections</em> was showcased. He is also a former Gotham Writers Workshop student, and he has received several accolades for his essays and short stories.</p>
+    <p><em>Shedding the Archive, For New Beginnings</em> is his self-publishing debut, and he currently lives and creates in Washington, D.C.</p>
+    <p class="cta-line"><a href="#">View his master CV →</a></p>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <h2>Shedding the Archive, For New Beginnings</h2>
+    <p><em>Shedding the Archive, For New Beginnings</em> — or alternatively <em>Ụlọ Akwụkwọ and the Fourth Wall Rendezvous</em> — follows five interconnected, but separate individuals as they discover the world through the eyes, fiction and nonfiction of the author, Vi Lawani.</p>
+    <p>Shedding the Archive reveals how an individual born into a nomadic experience learns of their heritage, their identity and their sense of purpose. The varied nature of the pieces that compose the book shows through doing how time, place, movement and augmenting maturity brings us closer to the selves and the realities we desired even before we could properly articulate what was lacking in our previous life.</p>
+    <p>Shedding the Archive is experimental — a mix of fiction, non-fiction and poetry. It is like a prayer, the string of words and wishes that closed off an era of exploration and discovery. The Vi that wrote the pieces that bejewel the book is not the same Vi that compiled and released it to the world. This is the truest accomplishment of Shedding the Archive: it made normal and plain the experiences and thoughts of an individual who lived unprecedentedly as both a child and a young adult. It reveals, through 28 chapters and a post-notes section, how a migrant boy from Africa, born in the Hellenic Republic, can become a global agent for change — especially for folks that are queer, Black and disenfranchised based on other arbitrary identity markers.</p>
+    <p>Some might say it reminds them of Ocean Vuong's debut, <em>On Earth We're Briefly Gorgeous</em>, and Warsan Shire's <em>Teaching My Mother How to Give Birth</em>, and they would not be far from the truth — because despite its genre-bending nature, Shedding the Archive shines through transparency and vulnerability, especially in its social commentary on this freshly post-colonial, digitized and globalized world. Don't hesitate to join Vi and his cohort of sibling spirits as they wander through the House of Creative and Intellectual Exploration — you might discover worlds you never anticipated.</p>
+    <p class="cta-line"><a href="#">Purchase the book →</a></p>
+  </div>
+</section>
+
+<section id="writings">
+  <div class="wrap">
+    <h2>Other Writings</h2>
+    <ul class="plain">
+      <li><a href="#">I Will Torment You</a></li>
+      <li><a href="#">Thank You for Coming</a></li>
+      <li><a href="#">Vi Talks</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="advocacy">
+  <div class="wrap">
+    <h2>Advocacy Journey and Priorities for the Road Ahead</h2>
+    <p>In response to an email I had sent her a month before, a former professor said, "your work is important," and in the memo of a Zelle transfer, a friend had said, "keep on fighting."</p>
+    <p>In both their words, there was the recognition that this work I do has impact beyond myself. There was an acknowledgment that there are hosts of people who look to my work as the difference between despair and hope.</p>
+    <p>I advocate for disenfranchised individuals — disenfranchised by several, often intersecting factors like poverty, race, creed, sexuality, gender, immigration status — because I know, starting with my own example in the world, how much positive power and influence the disenfranchised have. How necessary our voices are in political spaces, on the boards of Fortune 500 companies, in art galleries and on museum walls. I know how important it is for us to be included on bookshelves and in classrooms, on dollar bills and on Spotify playlists, gracing Broadway stages and occupying the writer's room. We need to be everywhere.</p>
+    <p>I advocate because disenfranchised experiences are ugly realities, and even while we have philosophical and academic debates over their causes, these realities exist as they are — and even deteriorate, in tandem with what some might call entropy. I advocate because the only way to interrupt the persistence of unideal realities is through action. I advocate because I know my safety is multiplied when my neighbors are safe as well. I advocate because I want to live freely and abundantly with other kinfolk who are equally free and abundant.</p>
+    <p>I was once thinking on my life and how it might compare to the humans that came before me, and it became clear that I existed as part of a cohort that could be called 'would-have-been-disappeared.' Here, disappeared does not only refer to the euphemism for state-executed abduction and murder — it also refers to the people whose wings were clipped at home at the command of an unspared rod, those broken at school by instructors and bullies alike. Those institutionalized, criminalized, deemed legally unfit to have a say in their own life. Those exiled, exposed to diseases with no cure or treatment; those who can say without irony that they would be a different person — one they think they might like more — if the policing forces in their life had given them more space to affirm who they would have rather been, safely.</p>
+    <p>'Would-have-been-disappeared' doesn't just describe how history has treated people like me in the past — it also highlights the fact that there aren't many individuals in the communities I affiliate with who can serve as a sign of well-rounded success. We don't only work to usher in a world without the unnecessary over-policing of people; we also work to show others how possible it is to live freely and abundantly while making an impact, without compromising on what we deem our most authentic selves.</p>
+    <p>I have known this was the start of a long journey for a while now, but recent months have brought me a new understanding of its length. This journey will proceed for as long as I have life, and God-willing, I will live long. I am now called to be more precise with my actions and appeals — after spending the larger part of my first few decades absorbing, building, burning down and recreating a foundational base of experience and knowledge, I am now in a place where I can start working on the larger structures, the more permanent fixtures, leveraging what I've learned in the classroom and in life to develop solutions that improve the quality of life of those whose free and bold existence is still seen as an enigmatic occurrence.</p>
+    <p>We are bringing forth a new paradigm, and it is taxing work — but necessary. It is necessary to live in a world where stepping outside the norm, in circumstances where there is no victim, is not used as grounds for a person's dehumanization. Dag Hammarskjöld, a former Secretary-General of the UN, is known for saying: "It has been said that the United Nations was not created in order to bring us to heaven, but in order to save us from hell." Most social justice work holds this sentiment close to its core. We can't stop bad things from happening, but we can affirm — with our words and actions — that even when bad things happen, it doesn't have to be irredeemable. It can merely be lacking, and in need of positive attention.</p>
+    <p>The list of things I want to work on during my lifetime is truly inexhaustive, but here are some of my priorities for the road ahead:</p>
+
+    <ol class="priorities">
+      <li><strong>Shedding the Archive.</strong> Continue promoting my self-publishing debut, <em>Shedding the Archive, For New Beginnings</em>.</li>
+      <li><strong>Food.</strong> Seeking collaborators across African food traditions; pharmacology and the impact of chemicals — licit and illicit — on the body and on fabrics and fibers; and potions, agbo-jedi-jedi and the related.</li>
+      <li><strong>Travel.</strong> Promoting travel between the African continent and the world, to and fro Europe and North America — with focus on New York, Los Angeles, Washington D.C., London, Paris, Cork, Dublin, Athens, Lagos, Abuja, Dakar, Nairobi, Johannesburg, Accra, Abidjan, Cape Town, and Berlin.</li>
+      <li><strong>Film, TV and Theater.</strong> Seeking filmmakers, TV producers, playwrights and directors supporting work in the US, the UK, France, Nigeria, and Ghana.</li>
+      <li><strong>Music.</strong> Looking for people who produce beats and songs, play guitar, piano or drums, and write music for plays, film and public consumption — across hip-hop, rap, afrobeats, jazz, pop and theater music, based in Lagos, London, Paris, Berlin, New York, Washington D.C., or Los Angeles.</li>
+      <li><strong>Language Instruction and Cultural Competency Training.</strong> Building immersive language learning opportunities — initial focus on French, English, Spanish, Greek, Portuguese, Arabic, Igbo, Yoruba, Wolof, and German.</li>
+      <li><strong>Law as an instrument.</strong> Harnessing the law to support these endeavors and to make states more legally conducive for nonconforming and persecuted citizens and residents — region by region, across Europe, North America, and Africa.</li>
+      <li><strong>Business Development Support, Counseling and Consulting.</strong> Supporting historically disadvantaged individuals in local and cross-border enterprise — fostering foreign investment in Africa, easing African commerce in Europe and North America, and navigating tax and compliance.</li>
+      <li><strong>Education.</strong> Supporting individuals seeking education across North America, Europe, and Africa, and advocating for admission and conduct reform that matches the needs of this century.</li>
+      <li><strong>Project Management.</strong> Bringing structure to complex projects, especially those bridging Africa, North America, and Europe.</li>
+      <li><strong>Literature and Publishing.</strong> Finding a literary agent for my traditionally published debut, <em>Accidental Artist // An Interview with My Chi</em>.</li>
+      <li><strong>PR, Social Media, Marketing and Copywriting.</strong> Available across private industry, government, and non-profits.</li>
+      <li><strong>Research.</strong> Academic and non-academic work on human rights, international politics, and the social realities of human beings.</li>
+      <li><strong>Sex Worker Advocacy.</strong> Convening around age verification systems, transparency for consumers of explicit content, and a HIPAA-respecting sexual health database that maintains dignity.</li>
+      <li><strong>Event Planning and Support.</strong> Related to my project management offerings.</li>
+      <li><strong>Photographers for an exhibition of the male form and anatomy.</strong> Cities of focus: New York, Los Angeles, Washington DC, London, Paris, Lagos, Accra, Abidjan, Dakar, Nairobi, Johannesburg, Cape Town.</li>
+      <li><strong>Engagement in Politics.</strong> Encouraging youth and the historically maligned to get involved in politics, as both public servants and engaged citizens.</li>
+    </ol>
+
+    <p class="cta-line" style="margin-top: 36px;"><a href="#">Read the full write-up (PDF) →</a></p>
+  </div>
+</section>
+
+<figure>
+  <figcaption>Vi with his sister, Chinye Onwuaduegbo, and his grandma.</figcaption>
+</figure>
+
+<footer>
+  <div class="wrap">vi lawani, 2026 &middot; copyright</div>
+</footer>
+
+</body>
+</html>
